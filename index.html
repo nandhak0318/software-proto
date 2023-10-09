@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Image on Button Click</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        #showImageBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #imageContainer {
+            display: none;
+        }
+
+        #image {
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div id="imageContainer">
+        <img src="" alt="Image" id="image"  >
+    </div>
+    <button id="showImageBtn">Show Image</button>
+    
+    <script>
+        const showImageButton = document.getElementById("showImageBtn");
+        const imageContainer = document.getElementById("imageContainer");
+        const image = document.getElementById("image");
+
+        showImageButton.addEventListener("click", function () {
+            imageContainer.style.display = "block";
+            image.src = "https://cdn-images-1.medium.com/v2/resize:fit:1200/1*bE1dQB4Qeqm7lL2FuC-bwg.png";
+        });
+    </script>
+</body>
+</html>
